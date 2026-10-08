@@ -202,3 +202,26 @@ Original files were inspected without modification. National files and the Clach
 5. Which architectural variants are documented consistently enough for comparison, and how securely can they be assigned to structures or phases?
 
 Review findings should update the relevant uncertainty through a dated entry. Acquisition leads, reviewer recommendations, and proposed experiments do not by themselves resolve an uncertainty.
+
+
+### D-007 — 2026-10-08: bootstrap a deliberately simple wave/no-wave notebook
+
+**Participants:** User and ChatGPT. **Related:** U-001, U-003.
+
+The user asked to learn the statistical machinery from first principles and proposed treating each dated site as a vector of candidate dates of unequal size, including vectors of size one. Discussion distinguished three separate questions: whether any selection can exhibit a wave-like ordering, whether such ordering persists across many plausible selections, and whether equally aggressive analysis can manufacture comparable ordering after the spatial/date relationship is destroyed.
+
+**Choice:** Begin with a deliberately crude educational notebook, `notebooks/01_dumb_wave_test.ipynb`, before implementing archaeological weighting or formal chronology models. Use Kendall's tau as the first wave score because its interpretation is pairwise and ordinal: site pairs are concordant when the more distant site is also later, and discordant when the ordering reverses. This avoids initially assuming a linear propagation speed.
+
+**Synthetic validation first:** The notebook creates three known toy worlds—an obvious monotonic wave, a weak/noisy wave, and dates generated independently of distance. The same random-slice algorithm must distinguish these synthetic cases before it is trusted on archaeological observations. This is a check on our reasoning and implementation, not validation of a broch-diffusion hypothesis.
+
+**Initial culling algorithm:** For each iteration, choose one candidate date uniformly at random from every site vector and compute Kendall's tau between fixed distance and the chosen dates. Repeat many times to obtain a distribution of scores. Uniform selection is knowingly not an archaeological construction-date model; later occupation, construction-associated material, residual material, and other contexts are not equivalent. The simplification is accepted only for V1 reconnaissance and teaching.
+
+**Initial null experiment:** Shuffle whole date vectors among fixed site locations, preserving each vector's contents and size while destroying its original association with geography. Apply the identical random-slice and scoring procedure. The purpose is to estimate how readily randomized spatial association can generate comparable wave-like ordering under the same analytical freedom.
+
+**Important interpretation rule:** Repeated slices do not increase the number of independent archaeological sites. They measure sensitivity/robustness of an inference to ambiguous date selection. A persistent ordering in real slices combined with weak ordering after permutation would be a reason for further investigation, not proof of cultural diffusion. Conversely, failure of even favorable/simple selections to reveal ordering would show that this particular observed dataset does not visibly encode the proposed wave under the tested definition; it would not prove that no historical diffusion occurred.
+
+**Deferred alternatives:** Weighted sampling by archaeological context, calibrated radiocarbon probability distributions, adversarial best/worst slice optimization, origin search, maritime-network distance, isotonic regression, and Bayesian latent construction-date models are intentionally deferred. Introducing them now would add assumptions before we understand the behavior of the simplest test.
+
+**Reconsideration criteria:** If Kendall's tau behaves unintuitively on the synthetic worlds, if the null permutation fails to preserve the aspects of the real data needed for a fair comparison, or if real archaeological vectors cannot be represented without silently conflating different structural phases/events, revise the notebook rather than forcing the evidence into this model.
+
+**Status:** Notebook scaffolded; it contains synthetic examples and an intentionally unfinished real-data adapter. No real broch-wave result has been computed by this notebook yet.
