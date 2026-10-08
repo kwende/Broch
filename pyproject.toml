@@ -23,6 +23,12 @@ dev = [
   "pytest>=8.3",
   "ruff>=0.7",
 ]
+notebook = [
+  "jupyterlab>=4.2",
+  "matplotlib>=3.9",
+  "numpy>=2.1",
+  "scipy>=1.14",
+]
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/broch"]
