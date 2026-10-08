@@ -117,6 +117,12 @@ Every derived datum should answer:
 
 Raw source material must never be silently edited.
 
+## Research diary and uncertainties
+
+[Diary.md](Diary.md) records open uncertainties, source inspections, barriers, workarounds, and research decisions. Start there when joining or reviewing the project. In particular, **U-001** tracks whether the available chronological evidence can distinguish diffusion hypotheses; the current evidence has not established adequacy.
+
+The diary includes the initial source-audit counts and their provenance. These are recorded inspection results; a reproducible ingestion pipeline has not yet been implemented. The logical schema remains provisional and may change with evidence.
+
 ## Status
 
 Bootstrap phase. The first milestone is to ingest the public site inventory and radiocarbon corpus and determine how many brochs actually possess useful construction-related chronological evidence.

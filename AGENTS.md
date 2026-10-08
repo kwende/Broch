@@ -172,3 +172,25 @@ When extending this repository:
 The goal is not to produce a persuasive map.
 
 The goal is to find out whether the broch phenomenon actually contains a detectable spatiotemporal pattern.
+
+## Research diary
+
+Read [Diary.md](Diary.md) when resuming research or reviewing the project. The diary is part of the research record, not an optional progress summary. Other researchers must be able to reconstruct and challenge the paths we took, including unsuccessful investigations and choices that limited the available evidence.
+
+For every consequential research choice, uncertainty, or barrier that changes the research path, append a dated entry explaining:
+
+1. **Question or trigger:** What problem, observation, or uncertainty required a choice?
+2. **Evidence examined:** Which datasets, publications, records, contexts, or experiments were actually checked? Include stable identifiers and precise locators where possible; distinguish verified evidence from unexamined leads.
+3. **Alternatives:** What plausible approaches or explanations were considered? Why were alternatives rejected, deferred, or left open? Do not invent alternatives retrospectively.
+4. **Reasoning and assumptions:** How does the evidence support the decision? State the mechanism or inferential steps, assumptions, confidence, and evidence that challenges the interpretation. Preserve the distinction between observation and judgment.
+5. **Decision and consequences:** What did we choose, why, and what does it permit or prevent us from concluding? For a workaround, identify what it bypasses and which uncertainty remains.
+6. **Verification and reconsideration:** What was tested, what happened, what remains untested, and what evidence or result would cause us to revisit the decision?
+7. **Attribution and follow-through:** Who investigated or reviewed it, which uncertainty IDs it affects, and what work remains?
+
+Record failed searches and unavailable sources when they affect coverage or the interpretation of absence. Record changes to inclusion criteria, joins, date transformations, classifications, schema, models, and uncertainty treatment with enough detail to reconstruct the earlier and later choices. A bare statement such as "cleaned the data" or "selected this model" is insufficient.
+
+Update uncertainty statuses with supporting evidence and links to dated entries. Preserve earlier reasoning, disagreements, and corrections; append a superseding explanation when our understanding changes. Distinguish a user-directed choice from an investigator's recommendation, and a proposed investigation from completed work. Agent review is not automatically archaeological expert review.
+
+Treat the schema as provisional and mutable with evidence. Distinguish proposed investigations from completed work, and never mark scientific uncertainty resolved merely because a file was acquired or a model fitted successfully.
+
+Scale detail to the significance of the choice: explain substantive research paths fully, while keeping routine mechanical work concise. The standard is whether a skeptical researcher can identify the assumptions, reproduce the relevant check, and disagree without having to infer missing reasoning from code or chat history.
